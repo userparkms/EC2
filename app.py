@@ -21,6 +21,7 @@ message = st.text_area("전달할 메시지를 입력하세요", placeholder="�
 # 버튼
 if st.button("✅ 제출하기", use_container_width=True):
     if name and message:
+        print(f"[LOG] 이름: {name}, 메시지: {message}") 
         st.success(f"안녕하세요, **{name}**님! 메시지가 정상적으로 접수되었습니다.")
         st.info(f"📨 입력하신 메시지: {message}")
         st.balloons()
